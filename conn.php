@@ -1,7 +1,7 @@
 <?php
 $host="localhost";
 $user="root";
-$pass="password";
+$pass="admin";
 $db  ="wpb_inventori";
 
 $koneksi = new mysqli($host,$user,$pass,$db);
