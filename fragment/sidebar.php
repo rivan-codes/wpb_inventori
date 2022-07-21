@@ -4,7 +4,7 @@
         <img src="dist/img/profile.png" class="img-circle elevation-2" alt="User Image">
     </div>
     <div class="info">
-        <a href="#" class="d-block">Rivan Nurdin</a>
+        <a href="#" class="d-block"><?=$profile->nama_operator;?></a>
     </div>
 </div>
 
@@ -34,13 +34,13 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="index.php?hal=home" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Home</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="index.php?hal=profile" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Profil</p>
                     </a>
@@ -149,13 +149,13 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="index.php?hal=laporan_harian" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Laporan Harian</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="index.php?hal=laporan_bulanan" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Laporan Bulanan</p>
                     </a>

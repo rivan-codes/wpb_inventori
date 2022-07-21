@@ -8,12 +8,13 @@ if(isset($_POST['proses'])){
     $nama_barang = $_POST['nama_barang'];
     $harga_barang = $_POST['harga_barang'];
     $satuan = $_POST['satuan'];
+    $id_operator = $profile->id_operator;
     
     // echo $satuan;
     // query insert 
     $tgl = date('Y-m-d H:i:s', time());
     // query untuk melakukan insert data ke dalam tabel barang
-    $query = "INSERT INTO tbl_barang(kode_barang, nama_barang, harga_barang, satuan, created_at, updated_at) values ('$kode_barang', '$nama_barang', '$harga_barang', '$satuan','$tgl','$tgl')";
+    $query = "INSERT INTO tbl_barang(kode_barang, nama_barang, harga_barang, satuan, created_at, updated_at, id_operator) values ('$kode_barang', '$nama_barang', '$harga_barang', '$satuan','$tgl','$tgl', '$id_operator')";
     
     $insert = $koneksi->query($query);
     if($insert){
@@ -35,7 +36,6 @@ if(isset($_POST['proses'])){
         <div class="card-header">
             <h3 class="card-title">Tambah Data Barang</h3>
         </div>
-
 
         <form accept="" method="post" action="">
             <div class="card-body">

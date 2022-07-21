@@ -1,7 +1,15 @@
 <?php 
 include("conn.php");
 
-$data = $koneksi->query("SELECT m.id_barang_masuk, m.qty_masuk, b.kode_barang, b.nama_barang, b.satuan, o.nama_operator, m.created_at FROM tbl_barang_masuk m INNER JOIN tbl_barang b ON m.id_barang=b.id_barang LEFT JOIN tbl_operator o ON m.id_operator=o.id_operator AND m.deleted_at IS null
+$data = $koneksi->query("SELECT m.id_barang_masuk, 
+    m.qty_masuk,
+    b.kode_barang,
+    b.nama_barang,
+    b.satuan,
+    o.nama_operator,
+    m.created_at FROM tbl_barang_masuk m 
+    INNER JOIN tbl_barang b ON m.id_barang=b.id_barang 
+    LEFT JOIN tbl_operator o ON m.id_operator=o.id_operator AND m.deleted_at IS null
 ORDER BY m.id_barang_masuk desc");
 
 // print_r($data);
